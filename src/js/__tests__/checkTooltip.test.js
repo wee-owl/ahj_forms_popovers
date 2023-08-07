@@ -14,13 +14,13 @@ describe('check button with toggle tooltip', () => {
   });
 
   test('check the rendering of the start page', async () => {
-    await page.goto('http://localhost:8080');
+    await page.goto('https://wee-owl.github.io/ahj_forms_popovers/');
     await page.waitForSelector('.some__container');
   });
 
   test('check tooltip toggle button', async () => {
     jest.setTimeout(20000);
-    await page.goto('http://localhost:8080');
+    await page.goto('https://wee-owl.github.io/ahj_forms_popovers/');
     await page.waitForSelector('.some__container');
 
     const container = await page.$('.some__container');
