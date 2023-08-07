@@ -1,0 +1,89 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/abel-regular.woff2') format('woff2');
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  outline: none;
+}
+
+p {
+  margin: 0;
+}
+
+html {
+  font-family: 'Abel', sans-serif;
+  background-color: #ffffff;
+  cursor: default;
+}
+
+body {
+  position: relative;
+  min-width: 25rem;
+  margin: 0;
+  padding: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.some__button {
+  max-width: 10rem;
+  height: 2rem;
+  margin-top: 1rem;
+  border: 0.1rem solid #8f0000;
+  border-radius: 0.3rem;
+  font-family: 'Abel', sans-serif;
+  font-size: inherit;
+  color: #ffffff;
+  background-color: #e50000;
+  cursor: pointer;
+}
+
+.some__button:active {
+  transform: scale(0.95);
+}
+
+.some__tooltip {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  border: 0.1rem solid #cccccc;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.some__tooltip-active {
+  display: flex;
+}
+
+.some__tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -0.35rem;
+  border-width: 0.35rem;
+  border-style: solid;
+  border-color: #cccccc transparent transparent transparent;
+}
+
+.some__tooltip-title {
+  padding: 0.2rem 0.5rem;
+  border-bottom: 0.1rem solid #eaeaea;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: #f7f7f7;
+}
+
+.some__tooltip-content {
+  padding: 0.2rem 0.5rem;
+}
